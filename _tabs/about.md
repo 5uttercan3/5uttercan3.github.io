@@ -5,4 +5,6 @@ order: 4
 ---
 
 
-> **Note**: Add Markdown syntax content to file `_tabs/about.md` and it will show up on this page.
+> I'm a web developer with experience in SEO, network infrastructure and computer repairs. 
+I have a keen interest in cyber security and decided to start this blog in order to document my journey
+with a view to hopefully one day doing it professionally.
