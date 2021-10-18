@@ -55,9 +55,9 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
   }
     
   .post-img {
-    background: var(--darkreader-bg--sidebar-bg);
+    
     border-radius: 15px; 
-    padding: 3px;
+    border: 3px solid #868585;
      @media screen and (max-width: 575px) {
       margin-bottom: 15px;
     }
