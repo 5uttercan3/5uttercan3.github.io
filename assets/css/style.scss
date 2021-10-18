@@ -58,6 +58,9 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
       background: var(--darkreader-bg--sidebar-bg);
       border-radius: 15px; 
       padding: 3px;
+      @media screen and (max-width: 575px) {
+        margin-bottom: 15px;
+      }
     }
     
     .post-details {
