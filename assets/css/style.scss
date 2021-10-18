@@ -1,0 +1,58 @@
+---
+---
+
+/*
+  If the number of TAB files has changed, the following variable is required.
+  And it must be defined before `@import`.
+*/
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+
+@import "{{ site.theme }}";
+
+/* append your custom style below */
+
+.post-preview {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--main-border-color);
+    h1 {
+      font-size: 1.4rem;
+      margin: 0;
+      ~i { // pinned icon
+        font-size: .86rem;
+      }
+    }
+
+    .post-meta {
+      i {
+        font-size: .73rem;
+        &:not(:first-child) { // post-meta icons on the homepage
+          margin-left: 1.5rem;
+        }
+      }
+    }
+
+    .post-content {
+      margin-top: .6rem;
+      margin-bottom: .6rem;
+      color: var(--post-list-text-color);
+    }
+    
+    .post-img-cnt {
+      // float:left;
+      display: table;
+      position: relative;
+      // margin: 15px auto;
+    }
+    
+    .post-img {
+      background: var(--darkreader-bg--sidebar-bg);
+      border-radius: 15px; 
+      padding: 3px;
+    }
+    
+    .post-details {
+      // float:left;
+      // width: 50%;
+    }
+  } // .post-preview
