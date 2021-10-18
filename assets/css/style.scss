@@ -12,59 +12,54 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 /* append your custom style below */
 
 .post-preview {
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--main-border-color);
-    h1 {
-      font-size: 1.4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--main-border-color);
+  h1 {
+    font-size: 1.4rem;
+    margin: 0;
+    ~i { // pinned icon
+      font-size: .86rem;
+    }
+  }
+
+  .post-meta {
+    i {
+      font-size: .73rem;
+      &:not(:first-child) { // post-meta icons on the homepage
+        margin-left: 1.5rem;
+      }
+    }
+  }
+
+  .post-content {
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+    color: var(--post-list-text-color);
+    >p {
+      /* Make preview shorter on the homepage */
       margin: 0;
-      ~i { // pinned icon
-        font-size: .86rem;
-      }
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
     }
-
-    .post-meta {
-      i {
-        font-size: .73rem;
-        &:not(:first-child) { // post-meta icons on the homepage
-          margin-left: 1.5rem;
-        }
-      }
-    }
-
-    .post-content {
-      margin-top: .6rem;
-      margin-bottom: .6rem;
-      color: var(--post-list-text-color);
-      >p {
-        /* Make preview shorter on the homepage */
-        margin: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-      }
-    }
+  }
+  
+  .post-img-cnt {
+    // float:left;
+    display: table;
+    position: relative;
+    // margin: 15px auto;
+  }
     
-    .post-img-cnt {
-      // float:left;
-      display: table;
-      position: relative;
-      // margin: 15px auto;
+  .post-img {
+    background: var(--darkreader-bg--sidebar-bg);
+    border-radius: 15px; 
+    padding: 3px;
+     @media screen and (max-width: 575px) {
+      margin-bottom: 15px;
     }
-    
-    .post-img {
-      background: var(--darkreader-bg--sidebar-bg);
-      border-radius: 15px; 
-      padding: 3px;
-      @media screen and (max-width: 575px) {
-        margin-bottom: 15px;
-      }
-    }
-    
-    .post-details {
-      // float:left;
-      // width: 50%;
-    }
-  } // .post-preview
+  } 
+} // .post-preview
